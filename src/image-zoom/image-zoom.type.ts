@@ -132,6 +132,10 @@ export class Props {
     //
   };
 
+  public handlePanSwipeDown?: (Y?: number) => void = () => {
+    //
+  }
+
   /**
    * 横向超出的距离，父级做图片切换时，可以监听这个函数
    * 当此函数触发时，可以做切换操作
@@ -171,7 +175,7 @@ export class Props {
   /**
    * function that fires when user swipes down
    */
-  public onSwipeDown?: () => void = () => {
+  public onSwipeDown?: (isSucess?: boolean) => void = () => {
     //
   };
 }
