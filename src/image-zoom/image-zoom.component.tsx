@@ -341,7 +341,9 @@ export default class ImageViewer extends React.Component<Props, State> {
                 // 只要滑动溢出量不小于 0，就可以拖动
                 if (this.swipeDownOffset > 0) {
                   this.positionY += diffY / this.scale;
-                  this.props.handlePanSwipeDown(this.positionY)
+                  if (this.props.handlePanSwipeDown) {
+                    this.props.handlePanSwipeDown(this.positionY)
+                  }
                   // 越到下方，缩放越小
                   // this.animatedScale.setValue(this.scale);
                 }
